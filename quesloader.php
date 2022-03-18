@@ -27,17 +27,17 @@
               $response["type"]=$cur_type;
               $response["cur_ques"]=$cur_ques;
               $response["question"]=$row["ques"];
-              $splitstor=[];
-              if($cur_type == 3){
-                $split = "SELECT * FROM `split` WHERE `split_id` = ".$cur_ques;
-                $splitres = mysqli_query($conn,$split);
-                if(mysqli_num_rows($splitres) > 0){
-                  while($row = mysqli_fetch_assoc($splitres)){
-                    array_push($splitstor,$row);
-                  }
-                  $response["data"]=$splitstor;
-                }
-              }
+              // $splitstor=[];
+              // if($cur_type == 0){
+              //   $split = "SELECT * FROM `split` WHERE `split_id` = ".$cur_ques;
+              //   $splitres = mysqli_query($conn,$split);
+              //   if(mysqli_num_rows($splitres) > 0){
+              //     while($row = mysqli_fetch_assoc($splitres)){
+              //       array_push($splitstor,$row);
+              //     }
+              //     $response["data"]=$splitstor;
+              //   }
+              // }
             }
           }
 
