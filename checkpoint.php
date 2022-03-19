@@ -23,27 +23,24 @@ if ($conn->connect_error) {
                 }
             }
             if ($curr < 17) {
-                $pts = $row["points"] - ($qno - 1) * 10 - 5;
-                $update = "UPDATE `users` SET `cur_ques` = " . 12 . ", `points` = " . $pts . "  WHERE `user_id` = '" . $user_id . "';";
-            } else if (($curr > 23 && $curr < 32)) {
-                $pts = $row["points"] - ($qno - 6) * 10 - 5;
-                $update = "UPDATE `users` SET `cur_ques` = " . 26 . ", `points` = " . $pts . "  WHERE `user_id` = '" . $user_id . "';";
-            } else if (($curr > 57 && $curr < 66)) {
-                $pts = $row["points"] - ($qno - 6) * 10 - 5;
-                $update = "UPDATE `users` SET `cur_ques` = " . 58 . ", `points` = " . $pts . "  WHERE `user_id` = '" . $user_id . "';";
-            } else if (($curr > 32 && $curr < 38)) {
+                //$pts = $row["points"] - ($qno - 1) * 10 - 5;
+                $update = "UPDATE `users` SET `cur_ques` = " . 4 . ", `points` = " . $pts . "  WHERE `user_id` = '" . $user_id . "';";
+            } else if (($curr > 22 && $curr < 36)) {
+                //$pts = $row["points"] - ($qno - 6) * 10 - 5;
+                $update = "UPDATE `users` SET `cur_ques` = " . 22 . ", `points` = " . $pts . "  WHERE `user_id` = '" . $user_id . "';";
+            } else if (($curr > 36 && $curr < 59)) {
+                //$pts = $row["points"] - ($qno - 6) * 10 - 5;
+                $update = "UPDATE `users` SET `cur_ques` = " . 37 . ", `points` = " . $pts . "  WHERE `user_id` = '" . $user_id . "';";
+            } else if (($curr > 62 && $curr < 68)) {
                 $pts = $row["points"] - ($qno - 10) * 10 - 5;
-                $update = "UPDATE `users` SET `cur_ques` = " . 34 . ", `points` = " . $pts . "  WHERE `user_id` = '" . $user_id . "';";
-            } else if (($curr > 66 && $curr < 71)) {
-                $pts = $row["points"] - ($qno - 10) * 10 - 5;
-                $update = "UPDATE `users` SET `cur_ques` = " . 67 . ", `points` = " . $pts . "  WHERE `user_id` = '" . $user_id . "';";
+                $update = "UPDATE `users` SET `cur_ques` = " . 6 . ", `points` = " . $pts . "  WHERE `user_id` = '" . $user_id . "';";
             } else if ($curr == 46) {
                 $pts = 0;
                 $update = "UPDATE `users` SET `cur_ques` = " . 52 . ", `points` = " . $pts . "  WHERE `user_id` = '" . $user_id . "';";
             }
             mysqli_query($conn, $update);
             $response["qno"] = $qno;
-            $response["message"] = "eureka bitch";
+            $response["message"] = "eureka ";
         }
     } else {
         $response["message"] = "womp womp womp";

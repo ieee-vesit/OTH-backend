@@ -31,7 +31,7 @@ if ($_SESSION["user_id"] == $user_id) {
         }
     }
 } else {
-    $response["message"] = "fuck off dude!";
+    $response["message"] = "go away dude!";
 }
 $conn->close();
 echo json_encode($response);
